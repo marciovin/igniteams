@@ -1,5 +1,5 @@
-import { ButtonIcon } from '../ButtonIcon/index';
 import { Container, Icon, Name} from './styles';
+import { ButtonIcon } from '../ButtonIcon/index';
 
 type Props = {
     name: string;
@@ -10,7 +10,7 @@ export function PlayerCard({name, onRemove}: Props) {
   return(
     <Container>
       <Icon
-      name='person'/>
+      name="person"/>
       
       <Name>
         {name}

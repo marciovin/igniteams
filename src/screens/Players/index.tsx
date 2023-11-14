@@ -13,7 +13,7 @@ import { Button } from "../../components/Button";
 
 export function Players(){
   const [team, setTeam] = useState('Time A');
-  const [players, setPlayers] = useState([]);
+  const [players, setPlayers] = useState([['macaw', 'william']]);
 
   return (
     <Container>
@@ -53,32 +53,16 @@ export function Players(){
 
    </HearderList>
           
-   <FlatList
-   data={players}
-   keyExtractor={item => item}
-   renderItem={({item}) => (
-    <PlayerCard 
-    name="item"
-    onRemove={() => {}}
-    />
-   )}   
-   ListEmptyComponent={() => (
-      <ListEmpty
-       message='não há pessoas aqui'
+    <FlatList
+    data={players}
+    keyExtractor={ item => item}
+    renderItem={({item}) => (
+      <PlayerCard 
+      name={item}
       />
-      )}
-      showsHorizontalScrollIndicator={false}
-      contentContainerStyle={[
-        { paddingBottom: 100},
-        players.length === 0 && { flex: 1}
-      ]}
-   />
+    )}
 
-   <Button
-   title="remover coluna"
-   type="SECONDARY"
-   /> 
-
+    />
     </Container>
   )
-}
+} 
