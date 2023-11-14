@@ -41,6 +41,7 @@ export function Players(){
           <Filter
           title={item}
           isActive={item === team}
+          
           onPress={() => setTeam(item)}
           />
         )}
