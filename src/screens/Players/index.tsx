@@ -13,7 +13,7 @@ import { Button } from "../../components/Button";
 
 export function Players(){
   const [team, setTeam] = useState('Time A');
-  const [players, setPlayers] = useState([['macaw', 'william']]);
+  const [players, setPlayers] = useState(['macaw', 'william','hudson','msrcio', 'maycon', 'osvaldo', 'vó bebel', 'vó nice']);
 
   return (
     <Container>
@@ -57,12 +57,26 @@ export function Players(){
     <FlatList
     data={players}
     keyExtractor={ item => item}
-    renderItem={({item}) => (
-      <PlayerCard 
+    renderItem={({item}) => (  <PlayerCard 
+      onRemove={() => {}}
       name={item}
-      />
-    )}
+      />)
+    }
+    ListEmptyComponent={() => (
+      <ListEmpty
+       message='não há pessoas neste time'
+       />
+       )}
+       showsVerticalScrollIndicator={false}
+       contentContainerStyle={[
+        { paddingBottom: 100 },
+        players.length === 0 && { flex: 1}
+       ]}
+    />
 
+    <Button 
+    title="Remover Turma"
+    type="SECONDARY"
     />
     </Container>
   )
