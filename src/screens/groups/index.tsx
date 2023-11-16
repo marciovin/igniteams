@@ -7,8 +7,7 @@ import { GroupCard } from "../../components/GroupCard";
 import { ListEmpty } from "../../components/ListEmpty";
 import { Button } from "../../components/Button";
 
-import { Container } from "./styles";
-
+import { Container } from "./styles"
 export function Groups() {
   const [groups, setGroups ] = useState([]); 
 
@@ -33,6 +32,7 @@ export function Groups() {
         <ListEmpty
          message='acho que está sem turma 🤔'
          />)}
+         showsVerticalScrollIndicator={false}
       />
 
       <Button
