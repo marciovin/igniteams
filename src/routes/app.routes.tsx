@@ -1,6 +1,6 @@
 import { createNativeStackNavigator} from '@react-navigation/native-stack'
 
-import { Groups } from '../screens/Groups';
+import { Groups } from '../screens/groups';
 import { Players } from '../screens/Players';
 import { NewGroup } from '../screens/NewGroup';
 
