@@ -1,6 +1,7 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "noUnusedParameters": false,
     "strict": true,
     "baseUrl": "./",
     "paths": {
