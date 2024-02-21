@@ -3,7 +3,9 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   flex: 1;
-  background-color: ${({theme}) => theme.COLORS.GRAY_700};
+  background-color: ${({ theme }) => theme.COLORS.GRAY_600};
+  align-items: center;
+  justify-content: center;
 `;
 
 export const CameraPreview = styled(Camera)`
@@ -18,17 +20,22 @@ export const ButtonContainer = styled.View`
   justify-content: center;
 `;
 
+export const Title = styled.Text`
+color: ${({ theme }) => theme.COLORS.GRAY_200};
+align-items: center;
+`
+
 export const Button = styled.TouchableOpacity`
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 10px;
-  background-color: ${({theme}) => theme.COLORS.GRAY_600};
+  background-color: ${({ theme }) => theme.COLORS.GRAY_600};
 `;
 
 export const SwitchButton = styled(Button)`
-  background-color:${({theme}) => theme.COLORS.GREEN_500};
+  background-color:${({ theme }) => theme.COLORS.GREEN_500};
 `;
 
 export const StopButton = styled(Button)`
